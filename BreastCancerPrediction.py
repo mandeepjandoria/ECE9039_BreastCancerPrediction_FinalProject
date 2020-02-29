@@ -32,4 +32,7 @@ df['diagnosis'].value_counts()
 # Normalize can be set to True to print proportions instead of number
 df['diagnosis'].value_counts(normalize=True)
 
+plt.xlabel('diagnosis')
+plt.ylabel('Number of records')
+plt.title('Univariate Analysis')
 df['diagnosis'].value_counts().plot.bar()
