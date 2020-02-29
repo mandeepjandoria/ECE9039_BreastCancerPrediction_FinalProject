@@ -11,6 +11,8 @@ from sklearn.model_selection import train_test_split
 
 # Reading data
 df = pd.read_csv('C:/Users/ABC/Desktop/UWO M.Eng ECE Software Engg/02 Winter/9039B MACHINE LEARNING/Project/train_main.csv', header=0);
+    #remove unnamed dummy collumn
+df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 
 # Making copy of original data for backup
 df_original = df.copy();
