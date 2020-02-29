@@ -32,7 +32,20 @@ df['diagnosis'].value_counts()
 # Normalize can be set to True to print proportions instead of number
 df['diagnosis'].value_counts(normalize=True)
 
+# Plot bar chart for target variable
 plt.xlabel('diagnosis')
 plt.ylabel('Number of records')
 plt.title('Univariate Analysis')
 df['diagnosis'].value_counts().plot.bar()
+
+# Plot box plot for independent variables
+sns.boxplot(x=df['radius_mean'])
+sns.boxplot(x=df['texture_mean'])
+sns.boxplot(x=df['perimeter_mean'])
+sns.boxplot(x=df['area_mean'])
+sns.boxplot(x=df['smoothness_mean'])
+sns.boxplot(x=df['compactness_mean'])
+sns.boxplot(x=df['concavity_mean'])
+sns.boxplot(x=df['concave points_mean'])
+sns.boxplot(x=df['symmetry_mean'])
+sns.boxplot(x=df['fractal_dimension_mean'])
